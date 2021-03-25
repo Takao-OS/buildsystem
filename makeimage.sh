@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-shopt -s globstar
-
 IMAGE_SIZE=4096
 IMAGE_NAME="$(realpath takao.hdd)"
 BUILD_DIR="$(realpath build)"

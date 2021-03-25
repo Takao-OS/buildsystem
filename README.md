@@ -5,7 +5,15 @@
 This is the repository for the build scripts of the final distribution of
 Takao and not only the kernel.
 
-For making the distribution and image you will need `xbstrap`.
+## Dependencies
+
+For making the distribution and image you will need `xbstrap`, which can be obtained with `pip` doing
+
+```bash
+pip install xbstrap
+```
+
+## Building
 
 For building:
 
