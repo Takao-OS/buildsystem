@@ -1,0 +1,10 @@
+packages:
+  - name: takao
+    source:
+      subdir: 'ports'
+      git: 'https://github.com/Takao-OS/Takao'
+      branch: 'main'
+    build:
+      - args: ['make', '-C', '@THIS_SOURCE_DIR@', '-j@PARALLELISM@']
+      - args: ['mkdir', '-p', '@THIS_COLLECT_DIR@/boot']
+      - args: ['cp', '@THIS_SOURCE_DIR@/takao', '@THIS_COLLECT_DIR@/boot/']
