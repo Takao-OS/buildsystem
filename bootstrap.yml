@@ -5,5 +5,9 @@ packages:
       git: 'https://github.com/Takao-OS/Takao'
       branch: 'main'
     build:
-      - args: ['make', '-C', '@THIS_SOURCE_DIR@', 'DFLAGS="-O -release -inline -flto=full"', '-j@PARALLELISM@']
-      - args: ['make', '-C', '@THIS_SOURCE_DIR@', 'DESTDIR="@THIS_COLLECT_DIR@"', 'install']
+      - args: ['make', '-C', '@THIS_SOURCE_DIR@', '-j@PARALLELISM@']
+        environ:
+          DFLAGS: '-O -release -inline -flto=full' 
+      - args: ['make', '-C', '@THIS_SOURCE_DIR@', 'install']
+        environ:
+          DESTDIR: '@THIS_COLLECT_DIR@'
